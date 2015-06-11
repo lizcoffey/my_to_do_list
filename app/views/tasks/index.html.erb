@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+    <div class="col-md-4">
+        <%= link_to new_task_path, remote: true do %>
+            <button class="btn btn-info">
+                <i class="fa fa-briefcase"></i> New Task
+            </button>
+        <% end %>
+        <div id="task-form" style="display:none;"></div>
+    </div>
+
+    <div class="col-md-8">
+        <h2>Tasks</h2>
+        <div id="tasks">
+          <ul>
+            <%= render @tasks %>
+          </ul>
+        </div>
+    </div>
+</div>
